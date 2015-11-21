@@ -1,0 +1,30 @@
+{
+  "name": "stock-trace",
+  "version": "0.0.1",
+  "description": "Trace stock price in Hong Kong through Yahoo Finance API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index"
+  },
+  "keywords": [
+    "Stock",
+    "Price",
+    "Crawler"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killalau/stock-trace.git"
+  },
+  "author": "Franky Lau <killalau1988@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/killalau/stock-trace/issues"
+  },
+  "homepage": "https://github.com/killalau/stock-trace#readme",
+  "dependencies": {
+    "babel-core": "^5.8.34",
+    "bignumber.js": "^2.1.0",
+    "moment": "^2.10.6",
+    "request": "^2.67.0"
+  }
+}
