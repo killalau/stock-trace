@@ -62,18 +62,6 @@ function mapQouteResult(row){
     };
 }
 
-function validQoute(obj){
-    for(let key in obj){
-        if(key === 'location' || key === 'code'){
-            continue;
-        }
-        if(obj[key] != null && obj[key] !== ''){
-            return true;
-        }
-    }
-    return false;
-}
-
 function _qoute(location, codes){
     return get({
         url: QOUTE_URL,
@@ -88,7 +76,7 @@ function _qoute(location, codes){
             .filter(row => row.trim().length > 0)
             .map(row => row.split(',').map(decodeString).map(escapeNa))
             .map(mapQouteResult)
-            .filter(validQoute);
+            .filter(v => v.name !== '');
         console.log('DONE');
         return rows;
     });
