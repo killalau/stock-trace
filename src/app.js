@@ -14,8 +14,8 @@ codes = codes.fill(0).map((v,i) => {
 
 qoute({codes})
     .then(data => {
-        let qouteTime = data[0].lastTradeDatetime;
-        let filename = `qoute-${qouteTime.format('YYYY-MM-DD_HHmmss')}.json`;
+        let qouteTime = moment();
+        let filename = `qoute-${qouteTime.utc().format('YYYY.MM.DD-HH.mm.ss')}.json`;
         let filepath = path.resolve(__dirname, '../dataDump/', filename);
         let dataJson = data.map(d => toJs(d));
         let json = JSON.stringify(dataJson);

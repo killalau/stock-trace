@@ -34,20 +34,24 @@ export function decodeString(str){
 }
 
 export function decodeFloat(str){
-    return big(parseFloat(str));
+    let num = big(parseFloat(str));
+    return num.isNaN() ? null : num;
 }
 
 export function decodePercent(str){
     let rate = str.substr(0, str.length - 1);
-    return decodeFloat(rate).div(100);
+    let num = decodeFloat(rate);
+    return num ? num.div(100) : null;
 }
 
 export function decodeDate(str){
-    return moment(str, 'M/D/YYYY');
+    let ret = moment(str, 'M/D/YYYY');
+    return ret.isValid() ? ret : null;
 }
 
 export function decodeDateTime(date, time){
-    return moment(`${date} ${time}`, 'M/D/YYYY h:ma');
+    let ret = moment(`${date} ${time}`, 'M/D/YYYY h:ma');
+    return ret.isValid() ? ret : null;
 }
 
 export function delay(time){

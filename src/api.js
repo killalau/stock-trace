@@ -3,7 +3,7 @@
 import BigNumber from 'bignumber.js';
 import moment from 'moment';
 
-import {QOUTE_URL, QOUTE_LIMIT, CRAWL_DELAY} from '../config/config.js';
+import {QOUTE_LIMIT, CRAWL_DELAY} from '../config/config.js';
 import {
     get,
     big,
@@ -16,6 +16,7 @@ import {
     delay
 } from './util.js';
 
+const QOUTE_URL = 'http://quote.yahoo.com/d/quotes.csv';
 const INVALID_CODES = 'Invalid Codes';
 
 function mapQouteResult(row){
@@ -61,6 +62,18 @@ function mapQouteResult(row){
     };
 }
 
+function validQoute(obj){
+    for(let key in obj){
+        if(key === 'location' || key === 'code'){
+            continue;
+        }
+        if(obj[key] != null && obj[key] !== ''){
+            return true;
+        }
+    }
+    return false;
+}
+
 function _qoute(location, codes){
     return get({
         url: QOUTE_URL,
@@ -74,7 +87,8 @@ function _qoute(location, codes){
         let rows = csv.split('\n')
             .filter(row => row.trim().length > 0)
             .map(row => row.split(',').map(decodeString).map(escapeNa))
-            .map(mapQouteResult);
+            .map(mapQouteResult)
+            .filter(validQoute);
         console.log('DONE');
         return rows;
     });
