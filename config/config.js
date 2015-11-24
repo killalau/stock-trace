@@ -1,2 +1,2 @@
 export var QOUTE_LIMIT = 200;
-export var CRAWL_DELAY = 5000;
+export var CRAWL_DELAY = 500;

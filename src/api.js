@@ -10,6 +10,7 @@ import {
     escapeNa,
     decodeString,
     decodeFloat,
+    decodeBigFloat,
     decodePercent,
     decodeDate,
     decodeDateTime,
@@ -20,15 +21,19 @@ const QOUTE_URL = 'http://quote.yahoo.com/d/quotes.csv';
 const INVALID_CODES = 'Invalid Codes';
 
 function mapQouteResult(row){
-    let [fullCode, name,
+    let [
+        fullCode, name,
         lastTradePrice, lastTradeDate, lastTradeTime,
         change, changeRate,
-        open, dayHigh, dayLow,
+        prevClose, open, dayHigh, dayLow,
+        ask, askSize, bid, bidSize,
+        volume, avgVolume, marketCap, revenue,
         m50, m50Change, m50ChangeRate,
         m200, m200Change, m200ChangeRate,
         w52High, w52HighChange, w52HighChangeRate,
         w52Low, w52LowChange, w52LowChangeRate,
-        dividendYield, dividendPerShare, devidendPayDate, exDividendDate] = row;
+        dividendYield, dividendPerShare, devidendPayDate, exDividendDate,
+    ] = row;
 
     let [code, location] = fullCode.split('.');
 
@@ -40,9 +45,18 @@ function mapQouteResult(row){
         lastTradeDatetime: decodeDateTime(lastTradeDate, lastTradeTime),
         change:            decodeFloat(change),
         changeRate:        decodePercent(changeRate),
+        prevClose:         decodeFloat(prevClose),
         open:              decodeFloat(open),
         dayHigh:           decodeFloat(dayHigh),
         dayLow:            decodeFloat(dayLow),
+        ask:               decodeFloat(ask),
+        askSize:           decodeFloat(askSize),
+        bid:               decodeFloat(bid),
+        bidSize:           decodeFloat(bidSize),
+        volume:            decodeFloat(volume),
+        avgVolume:         decodeFloat(avgVolume),
+        marketCap:         decodeBigFloat(marketCap),
+        revenue:           decodeBigFloat(revenue),
         m50:               decodeFloat(m50),
         m50Change:         decodeFloat(m50Change),
         m50ChangeRate:     decodePercent(m50ChangeRate),
@@ -58,7 +72,7 @@ function mapQouteResult(row){
         dividendYield:     decodeFloat(dividendYield),
         dividendPerShare:  decodeFloat(dividendPerShare),
         devidendPayDate:   decodeDate(devidendPayDate),
-        exDividendDate:    decodeDate(exDividendDate)
+        exDividendDate:    decodeDate(exDividendDate),
     };
 }
 
@@ -67,7 +81,7 @@ function _qoute(location, codes){
         url: QOUTE_URL,
         qs: {
             s: codes.map(id => id + '.' + location).join(','),
-            f: 'sn l1d1t1 c1p2 ohg m3m7m8 m4m5m6 kk4k5jj4j5 ydr1q'.replace(/\s/g, ''),
+            f: 'sn l1d1t1 c1p2 pohg aa5bb6 va2j1s6 m3m7m8 m4m5m6 kk4k5jj5j6 ydr1q'.replace(/\s/g, ''),
             e: '.csv'
         }
     })

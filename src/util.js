@@ -38,6 +38,22 @@ export function decodeFloat(str){
     return num.isNaN() ? null : num;
 }
 
+export function decodeBigFloat(str){
+    let match = str.match(/^(\d+(\.\d+)?)(\w)$/);
+    if(match){
+        const UNIT = ['M', 'B', 'T'];
+        let [matchStr, num, dp, unit] = match;
+        let unitIdx = UNIT.indexOf(unit);
+        num = big(num);
+        if(unitIdx > 0){
+            num = num.mul(big(1000).pow(unitIdx));
+        }
+        return num.isNaN() ? null : num;
+    }else{
+        return null;
+    }
+}
+
 export function decodePercent(str){
     let rate = str.substr(0, str.length - 1);
     let num = decodeFloat(rate);
