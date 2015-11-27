@@ -70,6 +70,17 @@ export function decodeDateTime(date, time){
     return ret.isValid() ? ret : null;
 }
 
+export function trimObject(obj){
+    let ret = Object.assign({}, obj);
+    Object.keys(ret).forEach(key => {
+        let value = ret[key];
+        if(value == null){
+            delete ret[key];
+        }
+    });
+    return ret;
+}
+
 export function delay(time){
     return data => {
         return new Promise((reslove, reject) => {
