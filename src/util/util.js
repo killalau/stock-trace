@@ -1,9 +1,16 @@
 'use strict';
 
+import path from 'path';
+import fs from 'fs';
 import url from 'url';
 import request from 'request';
 import BigNumber from 'bignumber.js';
 import moment from 'moment';
+
+import * as devConfig from '../../config/devConfig.js';
+import * as prodConfig from '../../config/prodConfig.js';
+
+export var config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
 
 export function get(opt){
     console.log(`HTTP GET: ${opt.url}${url.format({query: opt.qs})}`);

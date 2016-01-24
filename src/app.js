@@ -4,8 +4,8 @@ import fs from 'fs';
 import path from 'path';
 import moment from 'moment';
 
+import {trimObject} from './util/util.js';
 import {qoute, toJs} from './api.js';
-import {trimObject} from './util.js';
 
 let codes = new Array(2799);
 codes = codes.fill(0).map((v,i) => {

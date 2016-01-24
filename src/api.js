@@ -15,7 +15,7 @@ import {
     decodeDate,
     decodeDateTime,
     delay
-} from './util.js';
+} from './util/util.js';
 
 const QOUTE_URL = 'http://quote.yahoo.com/d/quotes.csv';
 const INVALID_CODES = 'Invalid Codes';
