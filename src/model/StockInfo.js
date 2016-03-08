@@ -14,4 +14,10 @@ StockInfoSchema.set('autoIndex', false);
 
 let StockInfo = mongoose.model('StockInfo', StockInfoSchema);
 
+StockInfo.createOrUpdate = rec => {
+    let {location, code} = rec;
+    let options = { new: true, upsert: true };
+    return StockInfo.findOneAndUpdate({location, code}, rec, options);
+};
+
 export default StockInfo;

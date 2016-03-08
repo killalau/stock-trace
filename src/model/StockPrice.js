@@ -32,10 +32,8 @@ let StockPrice = mongoose.model('StockPrice', StockPriceSchema);
 
 StockPrice.createOrUpdate = rec => {
     let {location, code, datetime} = rec;
-    let saveWhenNotExist = updateRec => {
-        return updateRec || StockPrice.create(rec);
-    };
-    return StockPrice.findOneAndUpdate({location, code, datetime}).then(saveWhenNotExist);
+    let options = { new: true, upsert: true };
+    return StockPrice.findOneAndUpdate({location, code, datetime}, rec, options);
 };
 
 export default StockPrice;

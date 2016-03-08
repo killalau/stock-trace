@@ -22,10 +22,8 @@ let StockDailySummary = mongoose.model('StockDailySummary', StockDailySummarySch
 
 StockDailySummary.createOrUpdate = rec => {
     let {location, code, date} = rec;
-    let saveWhenNotExist = updateRec => {
-        return updateRec || StockDailySummary.create(rec);
-    };
-    return StockDailySummary.findOneAndUpdate({location, code, date}).then(saveWhenNotExist);
+    let options = { new: true, upsert: true };
+    return StockDailySummary.findOneAndUpdate({location, code, date}, rec, options);
 };
 
 export default StockDailySummary;
