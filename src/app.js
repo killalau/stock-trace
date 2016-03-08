@@ -1,10 +1,10 @@
 'use strict';
 
-import fs from 'fs';
 import path from 'path';
 import moment from 'moment';
 
 import {trimObject} from './util/util.js';
+import {readdir, readFile} from './util/fs.js';
 import {qoute, toJs} from './api.js';
 import * as db from './util/connection.js';
 
@@ -21,15 +21,17 @@ codes = codes.fill(0).map((v,i) => {
 qoute({codes})
     .then(data => {
         let qouteTime = moment();
-        let filename = `qoute-${qouteTime.utc().format('YYYY.MM.DD-HH.mm.ss')}.json`;
-        let filepath = path.resolve(__dirname, '../dataDump/', filename);
         let dataJson = data.map(toJs);
-        let json = JSON.stringify(dataJson);
 
-        console.log(`Qoute Finish, save to file: ${filename}`);
+        console.log(`Qoute Finish at ${qouteTime.format()}, now save to db.`);
         db.open().then(con => {
             console.log('Success');
-            Promise.all(dataJson.map(save)).then(db.close).catch(console.log);
+            Promise.all(dataJson.map(save))
+                .then(db.close)
+                .catch(err => {
+                    console.log(err);
+                    db.close();
+                });
         });
     })
     .catch(console.error);
