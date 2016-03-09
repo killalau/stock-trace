@@ -125,11 +125,11 @@ export function toJs(data){
     let ret = Object.assign(data);
 
     Object.keys(ret).map(key => {
-        let value = ret[key];
+        let value = ret[key] = ret[key] || null;
         if(value instanceof BigNumber){
-            ret[key] = value.toNumber();
+            ret[key] = value.toNumber() || null;
         }else if(moment.isMoment(value)){
-            ret[key] = value.toDate();
+            ret[key] = value.toDate() || null;
         }
     });
 

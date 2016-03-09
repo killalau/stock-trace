@@ -26,7 +26,7 @@ let StockPriceSchema = new mongoose.Schema({
 });
 
 StockPriceSchema.index({location:1, code:1, datetime:1}, {unique: true});
-StockPriceSchema.set('autoIndex', false);
+StockPriceSchema.set('autoIndex', true);
 
 let StockPrice = mongoose.model('StockPrice', StockPriceSchema);
 

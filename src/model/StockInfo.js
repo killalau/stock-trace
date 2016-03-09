@@ -10,7 +10,7 @@ let StockInfoSchema = new mongoose.Schema({
 });
 
 StockInfoSchema.index({location:1, code:1}, {unique: true});
-StockInfoSchema.set('autoIndex', false);
+StockInfoSchema.set('autoIndex', true);
 
 let StockInfo = mongoose.model('StockInfo', StockInfoSchema);
 

@@ -16,7 +16,7 @@ let StockDailySummarySchema = new mongoose.Schema({
 });
 
 StockDailySummarySchema.index({location:1, code:1, date:1}, {unique: true});
-StockDailySummarySchema.set('autoIndex', false);
+StockDailySummarySchema.set('autoIndex', true);
 
 let StockDailySummary = mongoose.model('StockDailySummary', StockDailySummarySchema);
 
