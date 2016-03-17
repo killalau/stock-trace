@@ -4,7 +4,7 @@
   "description": "Trace stock price in Hong Kong through Yahoo Finance API",
   "main": "src/index.js",
   "scripts": {
-    "start": "node ./src/index"
+    "start": "node ./src/index crawl"
   },
   "keywords": [
     "Stock",
