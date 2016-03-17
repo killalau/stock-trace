@@ -3,14 +3,14 @@
 import path from 'path';
 import moment from 'moment';
 
-import {trimObject} from './util/util.js';
-import {readdir, readFile} from './util/fs.js';
+import {trimObject} from '../util/util.js';
+import {readdir, readFile} from '../util/fs.js';
+import * as db from '../util/connection.js';
 import {qoute, toJs} from './api.js';
-import * as db from './util/connection.js';
 
-import StockInfo from './model/StockInfo.js';
-import StockDailySummary from './model/StockDailySummary.js';
-import StockPrice from './model/StockPrice.js';
+import StockInfo from '../model/StockInfo.js';
+import StockDailySummary from '../model/StockDailySummary.js';
+import StockPrice from '../model/StockPrice.js';
 
 let codes = new Array(2799);
 codes = codes.fill(0).map((v,i) => {
