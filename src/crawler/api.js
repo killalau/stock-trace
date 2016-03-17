@@ -3,7 +3,7 @@
 import BigNumber from 'bignumber.js';
 import moment from 'moment';
 
-import {QOUTE_LIMIT, CRAWL_DELAY} from '../../config/config.js';
+import {config} from '../util/util.js';
 import {
     get,
     big,
@@ -17,6 +17,7 @@ import {
     delay
 } from '../util/util.js';
 
+const {QOUTE_LIMIT, CRAWL_DELAY} = config;
 const QOUTE_URL = 'http://quote.yahoo.com/d/quotes.csv';
 const INVALID_CODES = 'Invalid Codes';
 
