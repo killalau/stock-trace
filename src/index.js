@@ -1,3 +1,4 @@
 require("babel-core/register");
 
-require('./crawler/app.js');
+var crawler = require('./crawler/app.js');
+crawler.crawl();

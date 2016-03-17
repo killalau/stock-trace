@@ -12,42 +12,6 @@ import StockInfo from '../model/StockInfo.js';
 import StockDailySummary from '../model/StockDailySummary.js';
 import StockPrice from '../model/StockPrice.js';
 
-let codes = new Array(2799);
-codes = codes.fill(0).map((v,i) => {
-    let code = '000'+(i+1);
-    return code.substr(code.length - 4);
-});
-
-qoute({codes})
-    .then(data => {
-        let qouteTime = moment();
-        let dataJson = data.map(toJs);
-
-        console.log(`Qoute Finish at ${qouteTime.format()}, now save to db.`);
-        db.open().then(con => {
-            console.log('Success');
-            Promise.all(dataJson.map(save))
-                .then(db.close)
-                .catch(err => {
-                    console.error(err);
-                    db.close();
-                });
-        });
-    })
-    .catch(console.error);
-
-
-function save(json){
-    let {yesterdaySummary, todaySummary} = extractDailySummary(json);
-    let price = extractPrice(json);
-    let promise = [
-        StockDailySummary.createOrUpdate(yesterdaySummary),
-        StockDailySummary.createOrUpdate(todaySummary),
-        StockPrice.createOrUpdate(price),
-    ];
-    return Promise.all(promise);
-}
-
 function extractDailySummary(json) {
     let today = moment(json.lastTradeDatetime).utc().startOf('day');
     let yesterday = moment(today).subtract(1, 'd');
@@ -100,4 +64,53 @@ function extractPrice(json){
         w52LowCh:      json.w52LowChange      || null,
         w52LowChRate:  json.w52LowChangeRate  || null,
     };
+}
+
+function save(json){
+    let {yesterdaySummary, todaySummary} = extractDailySummary(json);
+    let price = extractPrice(json);
+    let promise = [
+        StockDailySummary.createOrUpdate(yesterdaySummary),
+        StockDailySummary.createOrUpdate(todaySummary),
+        StockPrice.createOrUpdate(price),
+    ];
+    return Promise.all(promise);
+}
+
+function getCodes(location = 'HK'){
+    let codes = [];
+    switch(location){
+        case 'HK':
+            codes = new Array(2799);
+            codes = codes.fill(0).map((v,i) => {
+                let code = '000'+(i+1);
+                return code.substr(code.length - 4);
+            });
+            return codes;
+        default:
+            return codes;
+    }
+}
+
+export function crawl(location = 'HK'){
+    let codes = getCodes(location);
+
+    qoute({location, codes})
+        .then(data => {
+            let qouteTime = moment();
+            let dataJson = data.map(toJs);
+
+            console.log(`Qoute Finish at ${qouteTime.format()}, now save to db.`);
+            db.open().then(con => {
+                console.log('Connect Success, start saving');
+                Promise.all(dataJson.map(save))
+                    .then(() => console.log('Save Success, will close DB connection'))
+                    .then(db.close)
+                    .catch(err => {
+                        console.error(err);
+                        db.close();
+                    });
+            });
+        })
+        .catch(console.error);
 }
