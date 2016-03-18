@@ -1,6 +1,7 @@
 require("babel-core/register");
 
 var crawler = require('./crawler/app.js');
+var server = require('./server/app.js');
 
 var argv = process.argv.slice();
 var nodepath = argv.shift();
@@ -12,6 +13,10 @@ switch (argv[0]) {
         crawler.crawl(location);       
         break;
 
+    case 'server':
+        var port = argv[1] || 3000;
+        server.start(port);
+        break;
     default:
         break;
 }
