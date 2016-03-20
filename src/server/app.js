@@ -1,18 +1,19 @@
 import Koa from 'koa';
+import router from 'koa-router';
 
 export function start(port = 3000){
     const app = new Koa();
     
-    app.use(function *(next){
+    app.use(async (ctx, next) => {
         let start = new Date();
-        yield next;
+        await next();
         let ms = new Date() - start;
-        console.log('%s %s - %sms', this.method, this.url, ms);
+        console.log('%s %s - %sms', ctx.method, ctx.url, ms);
     });
     
-    app.use(function *(){
-        this.body = 'Hello World';
-    })
+    app.use(async ctx => {
+        ctx.body = 'Hello World';
+    });
     
     app.listen(port);
 } 
