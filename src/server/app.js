@@ -1,5 +1,7 @@
 import Koa from 'koa';
-import router from 'koa-router';
+
+import * as db from '../util/connection.js';
+import api from './router/api.js';
 
 export function start(port = 3000){
     const app = new Koa();
@@ -11,9 +13,11 @@ export function start(port = 3000){
         console.log('%s %s - %sms', ctx.method, ctx.url, ms);
     });
     
-    app.use(async ctx => {
-        ctx.body = 'Hello World';
-    });
+    app.use(api.routes())
+        .use(api.allowedMethods());
     
-    app.listen(port);
+    db.open().then(() => {
+        app.listen(port);
+        console.log(`Web server started on port: ${port}`)        
+    });
 } 
