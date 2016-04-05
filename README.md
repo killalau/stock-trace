@@ -1,6 +1,6 @@
 # stock-trace
 
-Stock-trace is a tool use Yahoo Finance API to qoute the stock price, and save to MongoDB. I suggest setuping corn job to crawl data daily or more frequently for analysis purpose.
+Stock-trace is a tool use Yahoo Finance API to quote the stock price, and save to MongoDB. I suggest setuping corn job to crawl data daily or more frequently for analysis purpose.
 
 ## Prerequisite
 
