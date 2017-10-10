@@ -4,8 +4,8 @@
   "description": "Trace stock price in Hong Kong through Yahoo Finance API",
   "main": "src/index.js",
   "scripts": {
-    "start":      "node ./src/index crawl",
-    "server":     "node ./src/index server"
+    "start": "node ./src/index crawl",
+    "server": "node ./src/index server"
   },
   "keywords": [
     "Stock",
@@ -23,12 +23,14 @@
   },
   "homepage": "https://github.com/killalau/stock-trace#readme",
   "dependencies": {
-    "babel-core": "^5.8.34",
-    "bignumber.js": "^2.1.0",
-    "koa": "^2.0.0-alpha.3",
-    "koa-router": "^7.0.1",
-    "moment": "^2.10.6",
+    "bignumber.js": "^4.1.0",
+    "bluebird": "^3.5.1",
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "moment": "^2.18.1",
     "mongoose": "^4.4.7",
-    "request": "^2.67.0"
+    "ramda": "^0.25.0",
+    "request": "^2.67.0",
+    "yahoo-finance": "^0.3.3"
   }
 }
