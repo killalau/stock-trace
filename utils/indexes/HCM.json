@@ -1,0 +1,738 @@
+[
+  {
+    "symbol": "0008.HK",
+    "name": "電訊盈科"
+  },
+  {
+    "symbol": "0014.HK",
+    "name": "希慎興業"
+  },
+  {
+    "symbol": "0041.HK",
+    "name": "鷹君"
+  },
+  {
+    "symbol": "0043.HK",
+    "name": "卜蜂國際"
+  },
+  {
+    "symbol": "0119.HK",
+    "name": "保利置業集團"
+  },
+  {
+    "symbol": "0123.HK",
+    "name": "越秀地產"
+  },
+  {
+    "symbol": "0136.HK",
+    "name": "恒騰網絡"
+  },
+  {
+    "symbol": "0142.HK",
+    "name": "第一太平"
+  },
+  {
+    "symbol": "0148.HK",
+    "name": "建滔化工"
+  },
+  {
+    "symbol": "0152.HK",
+    "name": "深圳國際"
+  },
+  {
+    "symbol": "0165.HK",
+    "name": "中國光大控股"
+  },
+  {
+    "symbol": "0168.HK",
+    "name": "青島啤酒股份"
+  },
+  {
+    "symbol": "0173.HK",
+    "name": "嘉華國際"
+  },
+  {
+    "symbol": "0177.HK",
+    "name": "江蘇寧滬高速公路"
+  },
+  {
+    "symbol": "0178.HK",
+    "name": "莎莎國際"
+  },
+  {
+    "symbol": "0179.HK",
+    "name": "德昌電機控股"
+  },
+  {
+    "symbol": "0200.HK",
+    "name": "新濠國際發展"
+  },
+  {
+    "symbol": "0215.HK",
+    "name": "和記電訊香港"
+  },
+  {
+    "symbol": "0220.HK",
+    "name": "統一企業中國"
+  },
+  {
+    "symbol": "0242.HK",
+    "name": "信德集團"
+  },
+  {
+    "symbol": "0272.HK",
+    "name": "瑞安房地產"
+  },
+  {
+    "symbol": "0285.HK",
+    "name": "比亞迪電子"
+  },
+  {
+    "symbol": "0303.HK",
+    "name": "偉易達"
+  },
+  {
+    "symbol": "0308.HK",
+    "name": "香港中旅"
+  },
+  {
+    "symbol": "0315.HK",
+    "name": "數碼通電訊"
+  },
+  {
+    "symbol": "0316.HK",
+    "name": "東方海外國際"
+  },
+  {
+    "symbol": "0317.HK",
+    "name": "中船防務"
+  },
+  {
+    "symbol": "0330.HK",
+    "name": "思捷環球"
+  },
+  {
+    "symbol": "0336.HK",
+    "name": "華寶國際"
+  },
+  {
+    "symbol": "0338.HK",
+    "name": "上海石油化工股份"
+  },
+  {
+    "symbol": "0341.HK",
+    "name": "大家樂集團"
+  },
+  {
+    "symbol": "0345.HK",
+    "name": "維他奶國際"
+  },
+  {
+    "symbol": "0358.HK",
+    "name": "江西銅業股份"
+  },
+  {
+    "symbol": "0363.HK",
+    "name": "上海實業控股"
+  },
+  {
+    "symbol": "0390.HK",
+    "name": "中國中鐵"
+  },
+  {
+    "symbol": "0400.HK",
+    "name": "科通芯城"
+  },
+  {
+    "symbol": "0405.HK",
+    "name": "越秀房產信託基金"
+  },
+  {
+    "symbol": "0410.HK",
+    "name": "ＳＯＨＯ中國"
+  },
+  {
+    "symbol": "0425.HK",
+    "name": "敏實集團"
+  },
+  {
+    "symbol": "0439.HK",
+    "name": "光啟科學"
+  },
+  {
+    "symbol": "0440.HK",
+    "name": "大新金融"
+  },
+  {
+    "symbol": "0460.HK",
+    "name": "四環醫藥"
+  },
+  {
+    "symbol": "0489.HK",
+    "name": "東風集團股份"
+  },
+  {
+    "symbol": "0493.HK",
+    "name": "國美零售"
+  },
+  {
+    "symbol": "0506.HK",
+    "name": "中國食品"
+  },
+  {
+    "symbol": "0511.HK",
+    "name": "電視廣播"
+  },
+  {
+    "symbol": "0522.HK",
+    "name": "ASM PACIFIC"
+  },
+  {
+    "symbol": "0552.HK",
+    "name": "中國通信服務"
+  },
+  {
+    "symbol": "0570.HK",
+    "name": "中國中藥"
+  },
+  {
+    "symbol": "0576.HK",
+    "name": "浙江滬杭甬"
+  },
+  {
+    "symbol": "0586.HK",
+    "name": "海螺創業"
+  },
+  {
+    "symbol": "0590.HK",
+    "name": "六福集團"
+  },
+  {
+    "symbol": "0604.HK",
+    "name": "深圳控股"
+  },
+  {
+    "symbol": "0606.HK",
+    "name": "中國糧油控股"
+  },
+  {
+    "symbol": "0636.HK",
+    "name": "嘉里物流"
+  },
+  {
+    "symbol": "0658.HK",
+    "name": "中國高速傳動"
+  },
+  {
+    "symbol": "0665.HK",
+    "name": "海通國際"
+  },
+  {
+    "symbol": "0670.HK",
+    "name": "中國東方航空股份"
+  },
+  {
+    "symbol": "0680.HK",
+    "name": "南海控股"
+  },
+  {
+    "symbol": "0694.HK",
+    "name": "北京首都機場股份"
+  },
+  {
+    "symbol": "0696.HK",
+    "name": "中國民航信息網絡"
+  },
+  {
+    "symbol": "0698.HK",
+    "name": "通達集團"
+  },
+  {
+    "symbol": "0699.HK",
+    "name": "神州租車"
+  },
+  {
+    "symbol": "0732.HK",
+    "name": "信利國際"
+  },
+  {
+    "symbol": "0737.HK",
+    "name": "合和公路基建"
+  },
+  {
+    "symbol": "0751.HK",
+    "name": "創維數碼"
+  },
+  {
+    "symbol": "0753.HK",
+    "name": "中國國航"
+  },
+  {
+    "symbol": "0763.HK",
+    "name": "中興通訊"
+  },
+  {
+    "symbol": "0777.HK",
+    "name": "網龍"
+  },
+  {
+    "symbol": "0778.HK",
+    "name": "置富產業信託"
+  },
+  {
+    "symbol": "0787.HK",
+    "name": "利標品牌"
+  },
+  {
+    "symbol": "0806.HK",
+    "name": "惠理集團"
+  },
+  {
+    "symbol": "0817.HK",
+    "name": "中國金茂"
+  },
+  {
+    "symbol": "0861.HK",
+    "name": "神州控股"
+  },
+  {
+    "symbol": "0867.HK",
+    "name": "康哲藥業"
+  },
+  {
+    "symbol": "0868.HK",
+    "name": "信義玻璃"
+  },
+  {
+    "symbol": "0881.HK",
+    "name": "中升控股"
+  },
+  {
+    "symbol": "0884.HK",
+    "name": "旭輝控股集團"
+  },
+  {
+    "symbol": "0902.HK",
+    "name": "華能國際電力股份"
+  },
+  {
+    "symbol": "0914.HK",
+    "name": "海螺水泥"
+  },
+  {
+    "symbol": "0916.HK",
+    "name": "龍源電力"
+  },
+  {
+    "symbol": "0931.HK",
+    "name": "中國天然氣"
+  },
+  {
+    "symbol": "0934.HK",
+    "name": "中石化冠德"
+  },
+  {
+    "symbol": "0958.HK",
+    "name": "華能新能源"
+  },
+  {
+    "symbol": "0968.HK",
+    "name": "信義光能"
+  },
+  {
+    "symbol": "0981.HK",
+    "name": "中芯國際"
+  },
+  {
+    "symbol": "0996.HK",
+    "name": "嘉年華國際"
+  },
+  {
+    "symbol": "1031.HK",
+    "name": "金利豐金融"
+  },
+  {
+    "symbol": "1055.HK",
+    "name": "中國南方航空股份"
+  },
+  {
+    "symbol": "1066.HK",
+    "name": "威高股份"
+  },
+  {
+    "symbol": "1083.HK",
+    "name": "港華燃氣"
+  },
+  {
+    "symbol": "1099.HK",
+    "name": "國藥控股"
+  },
+  {
+    "symbol": "1112.HK",
+    "name": "Ｈ＆Ｈ國際控股"
+  },
+  {
+    "symbol": "1117.HK",
+    "name": "現代牧業"
+  },
+  {
+    "symbol": "1171.HK",
+    "name": "兗州煤業股份"
+  },
+  {
+    "symbol": "1186.HK",
+    "name": "中國鐵建"
+  },
+  {
+    "symbol": "1199.HK",
+    "name": "中遠海運港口"
+  },
+  {
+    "symbol": "1208.HK",
+    "name": "五礦資源"
+  },
+  {
+    "symbol": "1211.HK",
+    "name": "比亞迪股份"
+  },
+  {
+    "symbol": "1212.HK",
+    "name": "利福國際"
+  },
+  {
+    "symbol": "1282.HK",
+    "name": "中國金洋"
+  },
+  {
+    "symbol": "1293.HK",
+    "name": "廣匯寶信"
+  },
+  {
+    "symbol": "1308.HK",
+    "name": "海豐國際"
+  },
+  {
+    "symbol": "1313.HK",
+    "name": "華潤水泥控股"
+  },
+  {
+    "symbol": "1315.HK",
+    "name": "允升國際"
+  },
+  {
+    "symbol": "1316.HK",
+    "name": "耐世特"
+  },
+  {
+    "symbol": "1333.HK",
+    "name": "中國忠旺"
+  },
+  {
+    "symbol": "1336.HK",
+    "name": "新華保險"
+  },
+  {
+    "symbol": "1339.HK",
+    "name": "中國人民保險集團"
+  },
+  {
+    "symbol": "1347.HK",
+    "name": "華虹半導體"
+  },
+  {
+    "symbol": "1357.HK",
+    "name": "美圖公司"
+  },
+  {
+    "symbol": "1363.HK",
+    "name": "中滔環保"
+  },
+  {
+    "symbol": "1382.HK",
+    "name": "互太紡織"
+  },
+  {
+    "symbol": "1432.HK",
+    "name": "中國聖牧"
+  },
+  {
+    "symbol": "1458.HK",
+    "name": "周黑鴨"
+  },
+  {
+    "symbol": "1508.HK",
+    "name": "中國再保險"
+  },
+  {
+    "symbol": "1515.HK",
+    "name": "華潤鳳凰醫療"
+  },
+  {
+    "symbol": "1530.HK",
+    "name": "三生製藥"
+  },
+  {
+    "symbol": "1668.HK",
+    "name": "華南城"
+  },
+  {
+    "symbol": "1680.HK",
+    "name": "澳門勵駿"
+  },
+  {
+    "symbol": "1766.HK",
+    "name": "中國中車"
+  },
+  {
+    "symbol": "1776.HK",
+    "name": "廣發証券"
+  },
+  {
+    "symbol": "1788.HK",
+    "name": "國泰君安國際"
+  },
+  {
+    "symbol": "1813.HK",
+    "name": "合景泰富"
+  },
+  {
+    "symbol": "1816.HK",
+    "name": "中廣核電力"
+  },
+  {
+    "symbol": "1882.HK",
+    "name": "海天國際"
+  },
+  {
+    "symbol": "1888.HK",
+    "name": "建滔積層板"
+  },
+  {
+    "symbol": "1898.HK",
+    "name": "中煤能源"
+  },
+  {
+    "symbol": "1918.HK",
+    "name": "融創中國"
+  },
+  {
+    "symbol": "1919.HK",
+    "name": "中遠海控"
+  },
+  {
+    "symbol": "1958.HK",
+    "name": "北京汽車"
+  },
+  {
+    "symbol": "1970.HK",
+    "name": "IMAX CHINA"
+  },
+  {
+    "symbol": "1999.HK",
+    "name": "敏華控股"
+  },
+  {
+    "symbol": "2038.HK",
+    "name": "富智康集團"
+  },
+  {
+    "symbol": "2039.HK",
+    "name": "中集集團"
+  },
+  {
+    "symbol": "2128.HK",
+    "name": "中國聯塑"
+  },
+  {
+    "symbol": "2186.HK",
+    "name": "綠葉製藥"
+  },
+  {
+    "symbol": "2199.HK",
+    "name": "維珍妮"
+  },
+  {
+    "symbol": "2202.HK",
+    "name": "萬科企業"
+  },
+  {
+    "symbol": "2238.HK",
+    "name": "廣汽集團"
+  },
+  {
+    "symbol": "2269.HK",
+    "name": "藥明生物"
+  },
+  {
+    "symbol": "2314.HK",
+    "name": "理文造紙"
+  },
+  {
+    "symbol": "2329.HK",
+    "name": "國瑞置業"
+  },
+  {
+    "symbol": "2333.HK",
+    "name": "長城汽車"
+  },
+  {
+    "symbol": "2338.HK",
+    "name": "濰柴動力"
+  },
+  {
+    "symbol": "2356.HK",
+    "name": "大新銀行集團"
+  },
+  {
+    "symbol": "2357.HK",
+    "name": "中航科工"
+  },
+  {
+    "symbol": "2380.HK",
+    "name": "中國電力"
+  },
+  {
+    "symbol": "2386.HK",
+    "name": "中石化煉化工程"
+  },
+  {
+    "symbol": "2588.HK",
+    "name": "中銀航空租賃"
+  },
+  {
+    "symbol": "2600.HK",
+    "name": "中國鋁業"
+  },
+  {
+    "symbol": "2607.HK",
+    "name": "上海醫藥"
+  },
+  {
+    "symbol": "2611.HK",
+    "name": "國泰君安"
+  },
+  {
+    "symbol": "2689.HK",
+    "name": "玖龍紙業"
+  },
+  {
+    "symbol": "2727.HK",
+    "name": "上海電氣"
+  },
+  {
+    "symbol": "2777.HK",
+    "name": "富力地產"
+  },
+  {
+    "symbol": "2778.HK",
+    "name": "冠君產業信託"
+  },
+  {
+    "symbol": "2883.HK",
+    "name": "中海油田服務"
+  },
+  {
+    "symbol": "2899.HK",
+    "name": "紫金礦業"
+  },
+  {
+    "symbol": "3323.HK",
+    "name": "中國建材"
+  },
+  {
+    "symbol": "3331.HK",
+    "name": "維達國際"
+  },
+  {
+    "symbol": "3360.HK",
+    "name": "遠東宏信"
+  },
+  {
+    "symbol": "3377.HK",
+    "name": "遠洋集團"
+  },
+  {
+    "symbol": "3380.HK",
+    "name": "龍光地產"
+  },
+  {
+    "symbol": "3383.HK",
+    "name": "雅居樂集團"
+  },
+  {
+    "symbol": "3396.HK",
+    "name": "聯想控股"
+  },
+  {
+    "symbol": "3606.HK",
+    "name": "福耀玻璃"
+  },
+  {
+    "symbol": "3618.HK",
+    "name": "重慶農村商業銀行"
+  },
+  {
+    "symbol": "3698.HK",
+    "name": "徽商銀行"
+  },
+  {
+    "symbol": "3800.HK",
+    "name": "保利協鑫能源"
+  },
+  {
+    "symbol": "3808.HK",
+    "name": "中國重汽"
+  },
+  {
+    "symbol": "3886.HK",
+    "name": "康健國際醫療"
+  },
+  {
+    "symbol": "3888.HK",
+    "name": "金山軟件"
+  },
+  {
+    "symbol": "3898.HK",
+    "name": "中車時代電氣"
+  },
+  {
+    "symbol": "3899.HK",
+    "name": "中集安瑞科"
+  },
+  {
+    "symbol": "3900.HK",
+    "name": "綠城中國"
+  },
+  {
+    "symbol": "3908.HK",
+    "name": "中金公司"
+  },
+  {
+    "symbol": "3969.HK",
+    "name": "中國通號"
+  },
+  {
+    "symbol": "6030.HK",
+    "name": "中信証券"
+  },
+  {
+    "symbol": "6099.HK",
+    "name": "招商證券"
+  },
+  {
+    "symbol": "6818.HK",
+    "name": "中國光大銀行"
+  },
+  {
+    "symbol": "6881.HK",
+    "name": "中國銀河"
+  },
+  {
+    "symbol": "6886.HK",
+    "name": "ＨＴＳＣ"
+  },
+  {
+    "symbol": "7001.HK",
+    "name": "匯賢產業信託"
+  }
+]

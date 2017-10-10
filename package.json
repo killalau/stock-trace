@@ -32,5 +32,8 @@
     "ramda": "^0.25.0",
     "request": "^2.67.0",
     "yahoo-finance": "^0.3.3"
+  },
+  "devDependencies": {
+    "prettier": "^1.7.4"
   }
 }

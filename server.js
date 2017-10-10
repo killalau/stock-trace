@@ -22,35 +22,33 @@ const job = async (symbol) => {
     'financialData',
   ]);
 
-  const file = { history, quote };
+  let file = { history, quote };
+  file = JSON.stringify(file);
+  file = require('prettier').format(file, { parser: 'json' });
   const path = require('path');
   const fs = require('fs');
-  fs.writeFileSync(path.resolve(__dirname, 'dump', `${symbol}.json`), JSON.stringify(file));
+  fs.writeFileSync(path.resolve(__dirname, 'dump', `${symbol}.json`), file);
   console.log(`Download ${symbol} stock data success`);
 }
 
-// HSI.forEach(async (symbol) => {
-//   job(symbol);
-// });
+const promises = HSI.map(stock => job(stock.symbol));
+Promise.all(promises)
+  .then(() => {
+    let data = HSI.reduce((result, stock) => {
+      const { symbol, name } = stock;
+      const path = require('path');
+      const fs = require('fs');
+      const d = require(path.resolve(__dirname, 'dump', `${symbol}.json`));
+      const price = R.path(['quote', 'price', 'regularMarketPrice'], d);
+      const dividend = R.path(['quote', 'summaryDetail', 'dividendYield'], d);
+      result.push({ symbol, name, price, dividend });
+      return result;
+    }, []);
 
-const data = HSI.reduce((result, symbol) => {
-  const path = require('path');
-  const fs = require('fs');
-  const d = require(path.resolve(__dirname, 'dump', `${symbol}.json`));
-  result.push(d);
-  return result;
-}, []);
+    data = R.sortWith([
+      R.descend(R.prop('dividend')),
+    ])(data);
 
-let simpleData = data.map(d => {
-  const symbol = R.path(['quote', 'price', 'symbol'], d);
-  const name = R.path(['quote', 'price', 'longName'], d);
-  const price = R.path(['quote', 'price', 'regularMarketPrice'], d);
-  const dividend = R.path(['quote', 'summaryDetail', 'dividendYield'], d);
-  return { symbol, name, price, dividend };
-});
+    console.log(data);
+  });
 
-simpleData = R.sortWith([
-  R.descend(R.prop('dividend')),
-])(simpleData);
-
-console.log(simpleData.slice(0, 10));
