@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/killalau/stock-trace#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "bignumber.js": "^4.1.0",
     "bluebird": "^3.5.1",
+    "cheerio": "^1.0.0-rc.2",
     "koa": "^2.3.0",
     "koa-router": "^7.2.1",
     "moment": "^2.18.1",
