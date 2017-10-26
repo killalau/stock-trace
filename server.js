@@ -2,6 +2,7 @@ const R = require('ramda');
 
 const yahoo = require('./utils/yahoo');
 const { HSI } = require('./utils/stockIndexes');
+const { getStockList } = require('./services/hkStock');
 
 const job = async (symbol) => {
   console.log(`Start download ${symbol} stock data...`);
@@ -34,10 +35,10 @@ const job = async (symbol) => {
 const promises = HSI.map(stock => job(stock.symbol));
 Promise.all(promises)
   .then(() => {
+    const path = require('path');
+    const fs = require('fs');
     let data = HSI.reduce((result, stock) => {
       const { symbol, name } = stock;
-      const path = require('path');
-      const fs = require('fs');
       const d = require(path.resolve(__dirname, 'dump', `${symbol}.json`));
       const price = R.path(['quote', 'price', 'regularMarketPrice'], d);
       const dividend = R.path(['quote', 'summaryDetail', 'dividendYield'], d);
@@ -49,6 +50,14 @@ Promise.all(promises)
       R.descend(R.prop('dividend')),
     ])(data);
 
-    console.log(data);
+    const json = JSON.stringify(data);
+    const file = require('./utils/format').formatJsonString(json);
+    fs.writeFileSync(path.resolve(__dirname, 'dump/HSI.json'), file);
+  })
+  .then(() => getStockList())
+  .then(stocks => {
+    const json = JSON.stringify(stocks);
+    const file = require('./utils/format').formatJsonString(json);
+    const path = require('path');
+    require('fs').writeFileSync(path.resolve(__dirname, './dump/stocks.json'), file);
   });
-
